@@ -6,6 +6,9 @@ public class Biblioteca {
     private static final Map<String, Stack<Libro<?>>> libri_prestati = new HashMap<>();
     private static final Queue<Libro<?>> restituiti = new LinkedList<>();
 
+    public List<Libro<?>> getLibri(){
+        return libri;
+    }
 
     public void aggiungiLibro(Libro<?> libro){
         libri.add(libro);

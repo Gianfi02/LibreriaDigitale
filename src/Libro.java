@@ -12,4 +12,7 @@ public class Libro<T> {
     public T getCodice(){
         return codice;
     }
+    public String getNome(){
+        return nome;
+    }
 }
