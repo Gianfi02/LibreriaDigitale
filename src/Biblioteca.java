@@ -10,6 +10,12 @@ public class Biblioteca {
         return libri;
     }
 
+    public Queue<Libro<?>> getRestituiti(){
+        return restituiti;
+    }
+
+
+
     public void aggiungiLibro(Libro<?> libro){
         libri.add(libro);
 

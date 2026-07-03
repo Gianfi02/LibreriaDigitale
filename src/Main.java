@@ -25,11 +25,23 @@ public class Main {
 
         biblioteca_1.registraUtente("federico");
 
+        //SIMULAZIONE DI PRESTITI E RESTITUZIONI
         biblioteca_1.prestaLibro("mario", libro_1);
         biblioteca_1.prestaLibro("federico", libro_1);
 
         biblioteca_1.restauraLibro("federico");
+        //STAMPA LA LISTA DI LIBRI IN BIBLIOTECA
+        for (Libro<?> l : biblioteca_1.getLibri()){
+            System.out.println(l.getNome());
+        }
+        //STAMPA LA LISTA DI LIBRI RESTITUITI IN BIBLIOTECA
+        System.out.println("LIBRI RESTITUITI");
+        for (Libro<?> l : biblioteca_1.getRestituiti()){
+            System.out.println(l.getNome());
+        }
+        System.out.println("------------------");
 
+        // ORDINAMENTO SENZA CLASSE ANONIMA
 //        List<Libro<?>> libri = biblioteca_1.getLibri();
 //        libri.sort(Comparator.comparing(Libro::getNome)); // è come scrivere di libro chama libro.getNome, libro -> libro.getNome
 
@@ -44,11 +56,10 @@ public class Main {
                 return o1.getNome().compareTo(o2.getNome());
             }
         });
-
+        //STAMPA LA LISTA DI LIBRI IN BIBLIOTECA
         for (Libro<?> l : biblioteca_1.getLibri()){
             System.out.println(l.getNome());
         }
-
 
 
 
